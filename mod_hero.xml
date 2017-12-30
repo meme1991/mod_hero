@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+  <name>MOD_HERO</name>
+	<author>SPEDI srl</author>
+	<creationDate>Gennaio 2017</creationDate>
+	<copyright>Copyright (C) 1991 - 2016 SPEDI srl. Tutti i diritti riservati.</copyright>
+	<license>GNU General Public License version 2 or later;</license>
+	<authorEmail>sviluppo@spedi.it</authorEmail>
+	<authorUrl>http://www.spedi.it</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_HERO_DESC</description>
+
+    <files>
+        <filename>mod_hero.xml</filename>
+        <filename module="mod_hero">mod_hero.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+        <folder>language</folder>
+    </files>
+    <config>
+      <fields name="params">
+        <fieldset name="basic">
+          <field
+            name="hero-title"
+            type="text"
+            label="MOD_HERO_TITLE"
+            description="MOD_HERO_TITLE_DESC"
+          />
+
+          <field
+            name="hero-image"
+            type="media"
+            label="MOD_HERO_IMAGE"
+            description="MOD_HERO_IMAGE_DESC"
+            required="true"
+          />
+
+          <field type="spacer" name="myspacer" label="MOD_HERO_BUTTON_CAPTION_CONFIG" />
+
+          <field
+            name="hero-button-yn"
+            type="radio"
+            label="MOD_HERO_BUTTON"
+            description="MOD_HERO_BUTTON_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="hero-button-text"
+            type="text"
+            label="MOD_HERO_BUTTON_TEXT"
+            description="MOD_HERO_BUTTON_TEXT_DESC"
+            showon="hero-button-yn:1"
+          />
+
+          <field
+            name="note1"
+            type="note"
+            class="alert alert-info"
+            label="MOD_HERO_BUTTON_NOTE_LINK"
+            description="MOD_HERO_BUTTON_NOTE_LINK_DESC"
+            showon="hero-button-yn:1"
+          />
+
+          <field
+            name="hero-button-link"
+            type="text"
+            label="MOD_HERO_BUTTON_LINK"
+            description="MOD_HERO_BUTTON_LINK_DESC"
+            showon="hero-button-yn:1"
+          />
+
+          <field
+            name="hero-caption"
+            type="editor"
+            filter="JComponentHelper::filterText"
+            label="MOD_HERO_CAPTION"
+            description="MOD_HERO_CAPTION_DESC"
+          />
+        </fieldset>
+
+        <fieldset name="style" label="MOD_HERO_FIELDSET_STYLE">
+          <field
+            name="hero-height"
+            type="number"
+            default="400"
+            label="MOD_HERO_HEIGHT"
+            description="MOD_HERO_HEIGHT_DESC"
+          />
+
+          <field
+            name="hero-overlay-yn"
+            type="radio"
+            label="MOD_HERO_OVERLAY_YN"
+            description="MOD_HERO_OVERLAY_YN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <field
+            name="hero-overlay"
+            type="color"
+            label="MOD_HERO_OVERLAY"
+            description="MOD_HERO_OVERLAY_DESC"
+            showon="hero-overlay-yn:1"
+          />
+
+          <field
+            name="hero-pattern-yn"
+            type="radio"
+            label="MOD_HERO_PATTERN"
+            description="MOD_HERO_PATTERN_DESC"
+            class="btn-group btn-group-yesno"
+            default="0"
+            >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+          </field>
+
+          <!--<field
+            name="hero-container"
+            type="radio"
+            label="MOD_HERO_CONTAINER"
+            description="MOD_HERO_CONTAINER_DESC"
+            class="btn-group btn-group-yesno"
+            default="1"
+            >
+            <option value="1">Full-width</option>
+            <option value="0">Container</option>
+          </field>-->
+
+        </fieldset>
+
+      </fields>
+    </config>
+</extension>
