@@ -1,18 +1,18 @@
 <?php
-/**
- * @version    1.0.x
- * @package    SP Soft Background Image Module
- * @author     SPEDI srl http://www.spedi.it
- * @copyright  Copyright (c) 1991 - 2016 Spedi srl. Tutti i diritti riservati.
- * @license    GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
- */
+# @Author: SPEDI srl
+# @Date:   19-01-2018
+# @Email:  sviluppo@spedi.it
+# @Last modified by:   SPEDI srl
+# @Last modified time: 19-01-2018
+# @License: GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+# @Copyright: Copyright (C) SPEDI srl
 
 defined('_JEXEC') or die;
 
 JLoader::register('ModHeroHelper', __DIR__ . '/helper.php');
 
 /* params */
-$hero_title       = $params->get('hero-title');
+// $hero_title       = $params->get('hero-title');
 $hero_caption     = $params->get('hero-caption');
 $hero_image       = $params->get('hero-image');
 $hero_overlay_yn  = $params->get('hero-overlay-yn');
@@ -24,6 +24,7 @@ $hero_button_text = $params->get('hero-button-text');
 $hero_button_link = $params->get('hero-button-link');
 /* style */
 $hero_height      = $params->get('hero-height');
+$hero_align      = $params->get('hero-align');
 
 $document = JFactory::getDocument();
 
