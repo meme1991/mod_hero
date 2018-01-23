@@ -5,7 +5,7 @@ Hero - Joomla Module (SPEDI srl)
  * Bootstrap 4
 
 ## Installazione
- * Per installare Grid Gallery scarica prima lo zip
+ * Per installare Hero scarica prima lo zip
  * Accedi al pannello di controllo di Joomla
  * Estensioni > Gestione > Installa
  * Installa il .zip
